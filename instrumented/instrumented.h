@@ -10,6 +10,8 @@
 // display_stats(instrumented_int_vector)
 //
 
+#include <cstddef>
+
 // struct to collect stats
 struct instrumented_base {
     enum operations {
