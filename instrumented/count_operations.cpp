@@ -17,9 +17,8 @@ void count_operations_for_sort(size_t n){
     // generate a vector of size n with random ints
     std::vector<instrumented<int>> v(n);
     std::generate(v.begin(), v.end(), [](){ return std::rand() % INT_MAX; });
-    std::vector<instrumented<int>> vv{v};
     instrumented<int>::initialize(n);
-    std::sort(vv.begin(), vv.end());
+    std::sort(v.begin(), v.end());
     instrumented<int>::print_counts();
 }
 
