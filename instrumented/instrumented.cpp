@@ -15,7 +15,7 @@ const char* instrumented_base::counter_names[number_ops] = {
     "construction"
 };
 
-void instrumented_base::initialize(size_t m) {
+void instrumented_base::reset_counts(size_t m) {
     std::fill(counts, counts + number_ops, 0.0);
     counts[n] = double(m);
 }

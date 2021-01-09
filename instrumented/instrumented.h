@@ -28,7 +28,7 @@ struct instrumented_base {
     static const char* counter_names[number_ops];
     static double counts[number_ops];
 
-    static void initialize(size_t);
+    static void reset_counts(size_t);
     static void print_counts();
     static void print_header();
     static const size_t column_width = 15;
